@@ -1,4 +1,3 @@
-#https://circuitdigest.com/microcontroller-projects/raspberry-pi-3-gps-module-interfacing
 #gpio 14 ,15 , vcc, gnd
 
 
@@ -38,15 +37,7 @@ try:
             longval = msg_buff[3]
             #concatlong = "long:" + str(longval)
             #print(concatlong)
-            if not latval:
-                latval = 22.9532
-            if not longval:
-                longval = 88.3772
-            
-        latval = 22.9532
-        longval = 88.3772
         break
-        print("g")
-        #time.sleep(0.5)  #wait a little before picking the next data.
+        time.sleep(0.5)  #wait a little before picking the next data.
 except:
     print("loading...")
