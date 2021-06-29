@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#https://www.instructables.com/id/RF-433-MHZ-Raspberry-Pi/
 #gpio 27, vcc, gnd
 
 import signal
@@ -49,5 +48,6 @@ rfdevice.cleanup()"""
 
 
 def status():
-    #print('receive true')
-    return True
+    if str(rfdevice.rx_msg)=="Helmet Wear":
+        return True
+    return False
